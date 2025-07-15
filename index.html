@@ -2,9 +2,10 @@
 <html lang="pt">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AFERPAMA - Soc. Construções, Lda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aferpama Construções</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     @font-face {
       font-family: 'Brigends';
@@ -14,84 +15,80 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
       background: url('imagem-background.webp') no-repeat center center fixed;
       background-size: cover;
+      font-family: Arial, sans-serif;
       color: black;
-    }
-
-    .container {
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       text-align: center;
     }
 
     .logo {
-      max-width: 300px;
-      height: auto;
+      width: 250px;
       margin-bottom: 20px;
     }
 
     .headline {
       font-family: 'Brigends', sans-serif;
       font-size: 2.5em;
-      font-weight: bold;
-      margin: 0.2em 0;
+      line-height: 1.2em;
+      text-transform: uppercase;
     }
 
-    .subheadline {
-      font-family: Arial, sans-serif;
+    .subtext {
+      margin-top: 20px;
       font-size: 1em;
-      margin: 0.5em 0 1.5em;
     }
 
     .links {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 2em;
+      margin-top: 10px;
     }
 
     .links a {
       color: blue;
-      text-decoration: underline;
+      text-decoration: none;
+      margin: 0 10px;
       font-size: 0.9em;
     }
 
     .contacts {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
       font-size: 0.9em;
-      color: black;
-      font-family: Arial, sans-serif;
-      margin-bottom: 1em;
     }
 
-    @media (max-width: 768px) {
-      .headline {
-        font-size: 1.8em;
-      }
+    .contacts a {
+      color: blue;
+      text-decoration: none;
+      margin: 0 10px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <img src="logo.png" alt="Logo Aferpama" class="logo" />
+  <img src="logo.png" alt="Logo Aferpama" class="logo">
 
-    <div class="headline">ESTAMOS A CONSTRUIR</div>
-    <div class="headline">ALGO COM VALOR.</div>
+  <div class="headline">
+    Estamos a construir<br>
+    algo com valor.
+  </div>
 
-    <div class="subheadline">Volte em breve!</div>
+  <div class="subtext">Volte em breve!</div>
 
-    <div class="links">
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com" target="_blank">Facebook</a>
-    </div>
+  <div class="links">
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+  </div>
 
-    <div class="contacts">
-      <div><a href="tel:+351916884748">+351 916 884 748</a> &nbsp;&nbsp; <a href="mailto:geral@aferpama.com">geral@aferpama.com</a></div>
-    </div>
+  <div class="contacts">
+    <a href="tel:+351916884748">+351 916 884 748</a>
+    <a href="mailto:geral@aferpama.com">geral@aferpama.com</a>
   </div>
 </body>
 
