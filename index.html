@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aferpama</title>
   <style>
+    @font-face {
+      font-family: 'Brigends';
+      src: url('Brigends Expanded.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       padding: 0;
       background: url('imagem-background.webp') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
-      color: white;
       text-align: center;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
     img {
-      width: 400px;
-      max-width: 90%;
-      margin-bottom: 40px;
+      max-width: 300px;
+      margin: 0 auto 40px;
     }
 
     h1 {
-      font-size: 2.5em;
-      margin: 0 20px 20px;
+      font-family: 'Brigends', sans-serif;
+      font-size: 2.8em;
+      color: #000000;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.2em;
-      margin: 0 20px 40px;
-      color: #e0e0e0;
+      color: #eee;
+      margin-bottom: 30px;
     }
 
-    .links {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 60px;
+    .social {
+      margin-top: 20px;
     }
 
-    .links a {
-      color: #ccc;
-      font-size: 0.95em;
+    .social a {
+      margin: 0 15px;
+      font-size: 0.9em;
+      color: #00aaff;
       text-decoration: none;
     }
 
     .footer {
-      position: absolute;
-      bottom: 30px;
+      position: fixed;
+      bottom: 20px;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      font-size: 0.95em;
+      text-align: center;
+      font-size: 0.9em;
+      color: #cccccc;
     }
 
     .footer a {
-      color: #ccc;
+      color: #cccccc;
       text-decoration: none;
+      margin: 0 15px;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logotipo Aferpama">
-  <h1>Estamos a construir algo com valor. Volte em breve!</h1>
+  <img src="logo.png" alt="Logotipo Aferpama" />
+  <h1>Estamos a construir algo com valor.</h1>
+  <p>Volte em breve!</p>
 
-  <div class="links">
-    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+  <div class="social">
+    <a href="https://www.instagram.com/aferpama" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/aferpama" target="_blank">Facebook</a>
   </div>
 
   <div class="footer">
