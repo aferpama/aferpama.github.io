@@ -1,102 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AFERPAMA</title>
-    <style>
-      @font-face {
-        font-family: 'BrigendsExpanded';
-        src: url('Brigends Expanded.otf') format('opentype');
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Aferpama Construções</title>
+  <style>
+    @font-face {
+      font-family: 'Brigends Expanded';
+      src: url('Brigends Expanded.otf') format('opentype');
+    }
 
-      body {
-        margin: 0;
-        padding: 0;
-        background: url('imagem-background.webp') no-repeat center center fixed;
-        background-size: cover;
-        font-family: 'BrigendsExpanded', sans-serif;
-        color: #000;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .container {
-        text-align: center;
-        padding: 40px 20px 0 20px;
-      }
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
 
+    body {
+      background-image: url('imagem-background.webp');
+      background-size: cover;
+      background-position: center;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-grow: 1;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      width: 300px;
+      max-width: 80%;
+      margin-bottom: 40px;
+    }
+
+    .slogan {
+      font-family: 'Brigends Expanded', sans-serif;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .volte {
+      font-size: 1rem;
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: #0000EE;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px 0;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      font-family: Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .slogan {
+        font-size: 1.8rem;
+      }
       .logo {
         width: 200px;
-        max-width: 90%;
-        margin: 0 auto 20px auto;
-        display: block;
       }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
-      p.subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-      }
-
-      .socials {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-top: -10px;
-        margin-bottom: 10px;
-      }
-
-      .socials a {
-        color: blue;
-        font-size: 0.9rem;
-        text-decoration: underline;
-      }
-
-      .contacts {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        font-size: 0.9rem;
-        margin-bottom: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .logo {
-          width: 150px;
-        }
-
-        h1 {
-          font-size: 2rem;
-        }
-
-        .contacts {
-          flex-direction: column;
-          gap: 5px;
-          margin-bottom: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="logo.png" alt="AFERPAMA Logo" class="logo" />
-      <h1>ESTAMOS A CONSTRUIR ALGO COM VALOR.</h1>
-      <p class="subtitle">Volte em breve!</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/">Instagram</a>
-        <a href="https://www.facebook.com/">Facebook</a>
-      </div>
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Logótipo Aferpama" class="logo">
+    <div class="slogan">
+      <p>Estamos<br>A<br>Construir<br>Algo com<br>Valor.</p>
     </div>
-    <div class="contacts">
-      <a href="tel:+351916884748">+351 916 884 748</a>
-      <a href="mailto:geral@aferpama.com">geral@aferpama.com</a>
+    <div class="volte">Volte em breve!</div>
+    <div class="social">
+      <a href="https://www.instagram.com/aferpama" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/aferpama" target="_blank">Facebook</a>
     </div>
-  </body>
+  </div>
+  <div class="footer">
+    <p><a href="tel:+351916884748">+351 916 884 748</a> &nbsp;&nbsp; <a href="mailto:geral@aferpama.com">geral@aferpama.com</a></p>
+  </div>
+</body>
 </html>
