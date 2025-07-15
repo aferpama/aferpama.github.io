@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aferpama Construções</title>
-  <link rel="icon" type="image/png" href="https://aferpama.github.io/favicon.png">
-  <link rel="shortcut icon" type="image/png" href="https://aferpama.github.io/favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     @font-face {
       font-family: 'Brigends';
@@ -28,45 +27,67 @@
       text-align: center;
     }
 
-    .brigends {
-      font-family: 'Brigends', Arial, sans-serif;
-      font-size: clamp(1.5rem, 4vw, 4rem);
-      line-height: 1.2;
+    .logo {
+      width: 250px;
+      margin-bottom: 20px;
     }
 
-    .spacer {
-      height: 2vh;
+    .headline {
+      font-family: 'Brigends', sans-serif;
+      font-size: 2.5em;
+      line-height: 1.2em;
+      text-transform: uppercase;
+    }
+
+    .subtext {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+
+    .links {
+      margin-top: 10px;
     }
 
     .links a {
-      margin: 0 10px;
-      text-decoration: none;
       color: blue;
-      font-size: 0.9rem;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 0.9em;
     }
 
-    .footer {
-      font-size: 0.8rem;
-      margin-top: 10px;
+    .contacts {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .contacts a {
+      color: blue;
+      text-decoration: none;
+      margin: 0 10px;
     }
   </style>
 </head>
 
 <body>
-  <img src="logo.png" alt="Logo Aferpama" style="width: 200px; max-width: 80%; height: auto; margin-bottom: 20px;">
-  <div class="brigends">
-    <div>ESTAMOS A CONSTRUIR</div>
-    <div>ALGO COM VALOR.</div>
+  <img src="logo.png" alt="Logo Aferpama" class="logo">
+
+  <div class="headline">
+    Estamos a construir<br>
+    algo com valor.
   </div>
-  <div class="spacer"></div>
-  <div class="footer">Volte em breve!</div>
+
+  <div class="subtext">Volte em breve!</div>
+
   <div class="links">
-    <a href="https://www.instagram.com/">Instagram</a>
-    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
   </div>
-  <div class="footer">
+
+  <div class="contacts">
     <a href="tel:+351916884748">+351 916 884 748</a>
-    &nbsp;&nbsp;
     <a href="mailto:geral@aferpama.com">geral@aferpama.com</a>
   </div>
 </body>
