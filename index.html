@@ -6,29 +6,70 @@
   <title>Aferpama</title>
   <style>
     body {
-      background-color: #111;
+      background-color: #222; /* cinza escuro */
       color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
+
     img {
-      max-width: 200px;
-      margin: 40px auto 20px;
+      max-width: 350px;
+      margin-bottom: 30px;
     }
+
     h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 1.2em;
       color: #ccc;
+    }
+
+    .contact-left, .contact-right {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .contact-left {
+      left: 20px;
+    }
+
+    .contact-right {
+      right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      img {
+        max-width: 250px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .contact-left, .contact-right {
+        font-size: 0.8em;
+      }
     }
   </style>
 </head>
 <body>
   <img src="logo.png" alt="Logotipo Aferpama">
-  <h1>Bem-vindo ao site da Aferpama</h1>
+  <h1>AFERPAMA - Soc. Construções, Lda</h1>
   <p>Estamos a construir algo com valor. Volte em breve!</p>
+
+  <div class="contact-left">📞 +351 916 884 748</div>
+  <div class="contact-right">✉️ geral@aferpama.com</div>
 </body>
 </html>
