@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aferpama</title>
   <style>
     body {
-      background-color: #555; /* cinza mais claro */
+      background-color: #555; /* cinza claro */
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -28,17 +28,48 @@
     p {
       font-size: 1.2em;
       color: #eee;
+      margin-bottom: 50px;
     }
 
     .contacts {
       position: absolute;
-      bottom: 30px;
+      bottom: 50px;
       display: flex;
       gap: 40px;
       justify-content: center;
       align-items: center;
       color: #ddd;
       font-size: 1em;
+    }
+
+    .contacts a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    .socials {
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .socials a {
+      color: white;
+      font-size: 1.5em;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: background 0.3s;
+    }
+
+    .socials a:hover {
+      background: rgba(255, 255, 255, 0.3);
     }
 
     @media (max-width: 768px) {
@@ -50,18 +81,27 @@
         flex-direction: column;
         gap: 10px;
         font-size: 0.9em;
-        bottom: 20px;
+        bottom: 60px;
+      }
+
+      .socials {
+        bottom: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logotipo Aferpama">
+  <img src="logo.png" alt="Logotipo Aferpama" />
   <p>Estamos a construir algo com valor. Volte em breve!</p>
 
   <div class="contacts">
-    <div>📞 +351 916 884 748</div>
-    <div>✉️ geral@aferpama.com</div>
+    <div><a href="tel:+351916884748">📞 +351 916 884 748</a></div>
+    <div><a href="mailto:geral@aferpama.com">✉️ geral@aferpama.com</a></div>
+  </div>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/aferpama" target="_blank" title="Instagram">📸</a>
+    <a href="https://www.facebook.com/aferpama" target="_blank" title="Facebook">📘</a>
   </div>
 </body>
 </html>
