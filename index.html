@@ -6,76 +6,75 @@
   <title>Aferpama</title>
   <style>
     body {
-      background-image: url('imagem-background.webp');
+      margin: 0;
+      padding: 0;
+      background: url('imagem-background.webp') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: white;
       font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      padding: 50px 20px;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      background-color: #222; /* fallback se imagem não carregar */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     img {
-      max-width: 400px;
-      margin: 0 auto 30px;
+      width: 400px;
+      max-width: 90%;
+      margin-bottom: 40px;
     }
 
     h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      margin: 0 20px 20px;
     }
 
     p {
-      font-size: 1.3em;
-      color: #ddd;
+      font-size: 1.2em;
+      margin: 0 20px 40px;
+      color: #e0e0e0;
     }
 
-    .contacts {
+    .links {
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      font-size: 0.9em;
-      color: #ccc;
-      margin-bottom: 15px;
+      gap: 20px;
+      margin-bottom: 60px;
     }
 
-    .social {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 25px;
-      font-size: 0.9em;
-    }
-
-    a {
+    .links a {
       color: #ccc;
+      font-size: 0.95em;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-      color: white;
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 0.95em;
+    }
+
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div>
-    <img src="logo.png" alt="Logotipo Aferpama">
-    <h1>Bem-vindo ao site da Aferpama</h1>
-    <p>Estamos a construir algo com valor. Volte em breve!</p>
-    <div class="social">
-      <a href="https://instagram.com/aferpama" target="_blank">Instagram</a>
-      <a href="https://facebook.com/aferpama" target="_blank">Facebook</a>
-    </div>
+  <img src="logo.png" alt="Logotipo Aferpama">
+  <h1>Estamos a construir algo com valor. Volte em breve!</h1>
+
+  <div class="links">
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
   </div>
 
-  <div class="contacts">
+  <div class="footer">
     <a href="tel:+351916884748">+351 916 884 748</a>
     <a href="mailto:geral@aferpama.com">geral@aferpama.com</a>
   </div>
