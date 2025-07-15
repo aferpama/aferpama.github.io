@@ -1,102 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aferpama</title>
   <style>
     body {
-      background-color: #555;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+      text-align: center;
+      padding: 50px 20px;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      text-align: center;
+      justify-content: space-between;
+      background-color: #222; /* fallback se imagem não carregar */
     }
 
     img {
-      max-width: 700px;
-      margin-bottom: 30px;
+      max-width: 400px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2em;
-      color: #eee;
-      margin-bottom: 20px;
-    }
-
-    .social-links {
-      margin-bottom: 60px;
-    }
-
-    .social-links a {
-      display: block;
+      font-size: 1.3em;
       color: #ddd;
-      text-decoration: none;
-      margin: 5px 0;
-      font-size: 1em;
-    }
-
-    .social-links a:hover {
-      text-decoration: underline;
     }
 
     .contacts {
-      position: absolute;
-      bottom: 20px;
       display: flex;
-      gap: 40px;
       justify-content: center;
-      align-items: center;
-      color: #ddd;
-      font-size: 1em;
+      gap: 40px;
+      font-size: 0.9em;
+      color: #ccc;
+      margin-bottom: 15px;
     }
 
-    .contacts a {
-      color: #ddd;
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 25px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #ccc;
       text-decoration: none;
     }
 
-    .contacts a:hover {
+    a:hover {
       text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      img {
-        max-width: 90vw;
-      }
-
-      .contacts {
-        flex-direction: column;
-        gap: 10px;
-        font-size: 0.9em;
-        bottom: 20px;
-      }
-
-      .social-links a {
-        font-size: 0.95em;
-      }
+      color: white;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logotipo Aferpama" />
-  <p>Estamos a construir algo com valor. Volte em breve!</p>
-
-  <div class="social-links">
-    <a href="https://www.instagram.com/aferpama" target="_blank">https://www.instagram.com/aferpama</a>
-    <a href="https://www.facebook.com/aferpama" target="_blank">https://www.facebook.com/aferpama</a>
+  <div>
+    <img src="logo.png" alt="Logotipo Aferpama">
+    <h1>Bem-vindo ao site da Aferpama</h1>
+    <p>Estamos a construir algo com valor. Volte em breve!</p>
+    <div class="social">
+      <a href="https://instagram.com/aferpama" target="_blank">Instagram</a>
+      <a href="https://facebook.com/aferpama" target="_blank">Facebook</a>
+    </div>
   </div>
 
   <div class="contacts">
-    <div><a href="tel:+351916884748">📞 +351 916 884 748</a></div>
-    <div><a href="mailto:geral@aferpama.com">✉️ geral@aferpama.com</a></div>
+    <a href="tel:+351916884748">+351 916 884 748</a>
+    <a href="mailto:geral@aferpama.com">geral@aferpama.com</a>
   </div>
 </body>
 </html>
