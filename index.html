@@ -6,7 +6,7 @@
   <title>Aferpama</title>
   <style>
     body {
-      background-color: #555; /* cinza claro */
+      background-color: #555;
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -28,12 +28,28 @@
     p {
       font-size: 1.2em;
       color: #eee;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      margin-bottom: 60px;
+    }
+
+    .social-links a {
+      display: block;
+      color: #ddd;
+      text-decoration: none;
+      margin: 5px 0;
+      font-size: 1em;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
     }
 
     .contacts {
       position: absolute;
-      bottom: 50px;
+      bottom: 20px;
       display: flex;
       gap: 40px;
       justify-content: center;
@@ -51,27 +67,6 @@
       text-decoration: underline;
     }
 
-    .socials {
-      position: absolute;
-      bottom: 10px;
-      display: flex;
-      gap: 20px;
-    }
-
-    .socials a {
-      color: white;
-      font-size: 1.5em;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      transition: background 0.3s;
-    }
-
-    .socials a:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
     @media (max-width: 768px) {
       img {
         max-width: 90vw;
@@ -81,11 +76,11 @@
         flex-direction: column;
         gap: 10px;
         font-size: 0.9em;
-        bottom: 60px;
+        bottom: 20px;
       }
 
-      .socials {
-        bottom: 10px;
+      .social-links a {
+        font-size: 0.95em;
       }
     }
   </style>
@@ -94,14 +89,14 @@
   <img src="logo.png" alt="Logotipo Aferpama" />
   <p>Estamos a construir algo com valor. Volte em breve!</p>
 
+  <div class="social-links">
+    <a href="https://www.instagram.com/aferpama" target="_blank">https://www.instagram.com/aferpama</a>
+    <a href="https://www.facebook.com/aferpama" target="_blank">https://www.facebook.com/aferpama</a>
+  </div>
+
   <div class="contacts">
     <div><a href="tel:+351916884748">📞 +351 916 884 748</a></div>
     <div><a href="mailto:geral@aferpama.com">✉️ geral@aferpama.com</a></div>
-  </div>
-
-  <div class="socials">
-    <a href="https://www.instagram.com/aferpama" target="_blank" title="Instagram">📸</a>
-    <a href="https://www.facebook.com/aferpama" target="_blank" title="Facebook">📘</a>
   </div>
 </body>
 </html>
