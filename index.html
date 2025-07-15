@@ -6,7 +6,7 @@
   <title>Aferpama</title>
   <style>
     body {
-      background-color: #222; /* cinza escuro */
+      background-color: #333; /* cinza mais claro */
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -17,10 +17,11 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      text-align: center;
     }
 
     img {
-      max-width: 350px;
+      max-width: 700px;
       margin-bottom: 30px;
     }
 
@@ -31,35 +32,34 @@
 
     p {
       font-size: 1.2em;
-      color: #ccc;
+      color: #ddd;
     }
 
-    .contact-left, .contact-right {
+    .contacts {
       position: absolute;
-      bottom: 20px;
-      font-size: 0.9em;
-      color: #aaa;
+      bottom: 30px;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      color: #ccc;
+      font-size: 1em;
     }
 
-    .contact-left {
-      left: 20px;
-    }
-
-    .contact-right {
-      right: 20px;
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       img {
-        max-width: 250px;
+        max-width: 90vw;
       }
 
       h1 {
         font-size: 1.8em;
       }
 
-      .contact-left, .contact-right {
-        font-size: 0.8em;
+      .contacts {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.9em;
+        bottom: 20px;
       }
     }
   </style>
@@ -69,7 +69,9 @@
   <h1>AFERPAMA - Soc. Construções, Lda</h1>
   <p>Estamos a construir algo com valor. Volte em breve!</p>
 
-  <div class="contact-left">📞 +351 916 884 748</div>
-  <div class="contact-right">✉️ geral@aferpama.com</div>
+  <div class="contacts">
+    <div>📞 +351 916 884 748</div>
+    <div>✉️ geral@aferpama.com</div>
+  </div>
 </body>
 </html>
