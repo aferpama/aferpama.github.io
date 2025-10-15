@@ -12,84 +12,66 @@
       src: url('Brigends Expanded.otf') format('opentype');
     }
 
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: url('imagem-background.webp') no-repeat center center fixed;
-      background-size: cover;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      color: black;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    .hero {
       height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #fff;
+      padding: 100px 20px 20px 20px;
       text-align: center;
     }
 
-    .logo {
-      width: 250px;
-      margin-bottom: 20px;
-    }
-
-    .headline {
+    .hero h1 {
       font-family: 'Brigends', sans-serif;
-      font-size: 2.5em;
-      line-height: 1.2em;
-      text-transform: uppercase;
+      font-size: 2em;
+      max-width: 800px;
+      opacity: 0;
+      animation: fadeIn 3s ease-in-out forwards;
     }
 
-    .subtext {
-      margin-top: 20px;
-      font-size: 1em;
-    }
-
-    .links {
-      margin-top: 10px;
-    }
-
-    .links a {
-      color: blue;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 0.9em;
-    }
-
-    .contacts {
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9em;
-    }
-
-    .contacts a {
-      color: blue;
-      text-decoration: none;
-      margin: 0 10px;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 
 <body>
-  <img src="logo.png" alt="Logo Aferpama" class="logo">
+  <header>
+    <img src="logo.png" alt="Logo Aferpama">
+  </header>
 
-  <div class="headline">
-    Estamos a construir<br>
-    algo com valor.
-  </div>
+  <section class="hero">
+    <h1>Edifica como se vivesses para sempre (...)<br>mas vive como se a morte estivesse próxima<br><small>A. Andrade, 1948</small></h1>
+  </section>
 
-  <div class="subtext">Volte em breve!</div>
+  <!-- Mais secções para scroll podem ser adicionadas aqui -->
 
-  <div class="links">
-    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com" target="_blank">Facebook</a>
-  </div>
-
-  <div class="contacts">
-    <a href="tel:+351916884748">+351 916 884 748</a>
-    <a href="mailto:geral@aferpama.com">geral@aferpama.com</a>
-  </div>
 </body>
 
 </html>
