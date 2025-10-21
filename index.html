@@ -7,11 +7,6 @@
   <title>Aferpama Construções</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
-    @font-face {
-      font-family: 'Brigends';
-      src: url('Brigends Expanded.otf') format('opentype');
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +14,9 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #111;
       overflow-x: hidden;
     }
 
@@ -27,35 +24,42 @@
       position: fixed;
       top: 0;
       left: 0;
-      padding: 20px;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
       z-index: 1000;
     }
 
-    header img {
-      height: 40px;
+    .logo {
+      height: 30px;
     }
 
-    .hero {
+    section.hero {
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #fff;
-      padding: 100px 20px 20px 20px;
       text-align: center;
+      padding: 2rem;
     }
 
     .hero h1 {
-      font-family: 'Brigends', sans-serif;
-      font-size: 2em;
+      font-size: 2rem;
       max-width: 800px;
       opacity: 0;
-      animation: fadeIn 3s ease-in-out forwards;
+      animation: fadeIn 3s ease-in forwards;
     }
 
     @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
@@ -63,14 +67,14 @@
 
 <body>
   <header>
-    <img src="logo.png" alt="Logo Aferpama">
+    <img src="logo.png" alt="Logo Aferpama" class="logo">
   </header>
 
   <section class="hero">
-    <h1>Edifica como se vivesses para sempre (...)<br>mas vive como se a morte estivesse próxima<br><small>A. Andrade, 1948</small></h1>
+    <h1>Edifica como se vivesses para sempre (...)<br>mas vive como se a morte estivesse próxima<br><small>— A. Andrade, 1948</small></h1>
   </section>
 
-  <!-- Mais secções para scroll podem ser adicionadas aqui -->
+  <!-- Outras secções a serem adicionadas com scroll -->
 
 </body>
 
