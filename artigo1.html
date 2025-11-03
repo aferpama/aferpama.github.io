@@ -443,9 +443,16 @@
 @media (max-width: 768px) {
   .modo-toggle-container {
     position: fixed;
-    top: 80px; /* ajusta para aparecer abaixo do header */
-    right: 15px;
+    top: 85px; /* ligeiramente abaixo do header */
+    right: 20px;
     z-index: 999;
+    transform: scale(0.5); /* reduz para 50% */
+    opacity: 0.5; /* mantém o mesmo estilo suave */
+    transition: opacity 0.3s ease;
+  }
+
+  .modo-toggle-container:hover {
+    opacity: 1;
   }
 }
 </style>
