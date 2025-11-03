@@ -43,9 +43,12 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("assets/fundo_viroc.webp") center bottom / cover no-repeat;
+  background: url("assets/fundo_viroc.webp") center center / cover no-repeat;
   opacity: 0.7;
   z-index: 0;
+  background-attachment: scroll;
+  image-rendering: auto;
+  -webkit-transform: translateZ(0);
 }
 
 /* Remover fade inferior */
@@ -72,6 +75,15 @@ header {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-sobre::before {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh !important;
+    background-attachment: scroll !important;
+  }
 }
 
 .hero-content p {
@@ -299,6 +311,35 @@ body::after {
 }
 
 /* Reduz margem inferior do título do artigo */
+
 .artigo-titulo {
   margin-bottom: 6px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: calc(100vh - 60px); /* ajusta 60px conforme a altura do footer */
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin: 0 !important;
+  padding: 10px 0 !important;
+  background: rgba(0,0,0,0.9);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
 }

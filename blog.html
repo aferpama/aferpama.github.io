@@ -332,6 +332,34 @@
         padding: 60px 20px;
       }
     }
+
+    /* ===== AJUSTE TEXTO MOBILE ===== */
+    @media (max-width: 768px) {
+      body, p, h1, h2, h3, h4, h5, h6 {
+        font-size: 0.6rem !important;
+        line-height: 1.4 !important;
+      }
+
+      .hero-sobre h1 {
+        font-size: 1.5rem !important;
+      }
+
+      .hero-sobre h2 {
+        font-size: 1rem !important;
+      }
+    }
+
+    /* ===== CORRIGIR TOGGLE NOITE/DIA ===== */
+    #theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 10000 !important;
+    }
+
+    header {
+      z-index: 9000 !important;
+    }
   </style>
 
   <!-- ===== SCRIPTS ===== -->

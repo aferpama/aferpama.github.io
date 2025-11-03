@@ -1,0 +1,102 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXFileReference section */
+		CBC4CF102EB0B8420044DBEB /* sobre.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = sobre.html; sourceTree = "<group>"; };
+		CBC4CF122EB0DEC50044DBEB /* style_sobre.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style_sobre.css; sourceTree = "<group>"; };
+		CBC4CF162EB2011B0044DBEB /* blog.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = blog.html; sourceTree = "<group>"; };
+		CBD4AEA92EB3C5D5007E7DF3 /* artigo1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = artigo1.html; sourceTree = "<group>"; };
+		CBED128D2EA77B0D00B8B9C3 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		CBED128E2EA7800400B8B9C3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
+		CBED12922EA7965A00B8B9C3 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CBED12892EA77A0E00B8B9C3 /* assets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = assets;
+			sourceTree = "<group>";
+		};
+		CBED12982EA7C70A00B8B9C3 /* fonts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXGroup section */
+		CBED12822EA7775600B8B9C3 = {
+			isa = PBXGroup;
+			children = (
+				CBED128D2EA77B0D00B8B9C3 /* index.html */,
+				CBED12922EA7965A00B8B9C3 /* style.css */,
+				CBC4CF102EB0B8420044DBEB /* sobre.html */,
+				CBC4CF162EB2011B0044DBEB /* blog.html */,
+				CBD4AEA92EB3C5D5007E7DF3 /* artigo1.html */,
+				CBC4CF122EB0DEC50044DBEB /* style_sobre.css */,
+				CBED128E2EA7800400B8B9C3 /* favicon.png */,
+				CBED12982EA7C70A00B8B9C3 /* fonts */,
+				CBED12892EA77A0E00B8B9C3 /* assets */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		CBED12832EA7775600B8B9C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = CBED12862EA7775600B8B9C3 /* Build configuration list for PBXProject "aferpama.com" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBED12822EA7775600B8B9C3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		CBED12872EA7775600B8B9C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		CBED12882EA7775600B8B9C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBED12862EA7775600B8B9C3 /* Build configuration list for PBXProject "aferpama.com" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBED12872EA7775600B8B9C3 /* Debug */,
+				CBED12882EA7775600B8B9C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBED12832EA7775600B8B9C3 /* Project object */;
+}
