@@ -1,0 +1,304 @@
+/ * ===== SOBRE - AFERPAMA ===== */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #000 !important;
+  color: #000;
+}
+
+header {
+  background-color: #000;
+}
+
+.intro {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* HERO SECTION - Fundo com fade e texto à esquerda */
+.hero-sobre {
+  position: relative;
+  height: 40vh;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+  background: none;
+}
+
+.hero-sobre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/fundo_viroc.webp") center bottom / cover no-repeat;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* Remover fade inferior */
+.hero-sobre::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Texto dentro da imagem */
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Espaço abaixo para o scroll fluir naturalmente */
+#corpo-sobre {
+  background: linear-gradient(to bottom, #000 80%, rgba(0,0,0,0.9) 100%);
+  padding: 40px 10% 80px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+#corpo-sobre strong {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  /* realce discreto com "marca-texto" suave, em vez de texto vermelho */
+  background: linear-gradient(180deg, transparent 65%, rgba(229, 82, 77, 0.18) 0);
+  padding: 0 .06em;
+  border-radius: 2px;
+}
+
+#corpo-sobre h2, #corpo-sobre h3 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#corpo-sobre h3::after {
+  content: "";
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #8b0000, transparent);
+}
+
+#corpo-sobre h3 {
+  position: relative;
+  padding-left: 80px;
+}
+
+#corpo-sobre p {
+  margin-bottom: 25px;
+}
+
+#corpo-sobre h2:not(:first-of-type) {
+  margin-top: 120px;
+}
+
+
+#corpo-sobre p:last-of-type {
+  margin-bottom: 120px; /* aumenta conforme quiseres */
+}
+
+html, body {
+  background-color: #000 !important;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+footer {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#corpo-sobre {
+  padding-top: 10px !important;
+  padding-bottom: 60px !important;
+}
+
+/* ====== Eliminar espaço residual abaixo do mapa ====== */
+#contacto, .mapa, .map-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 1px;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  width: 100%;
+  height: 450px;
+}
+
+footer {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
+}
+
+body::after {
+  content: none !important;
+}
+
+/* Eliminar qualquer linha ou pseudo-elemento vermelho sob o hero */
+.hero-sobre h1::after,
+.hero-sobre h2::after,
+.hero-sobre p::after {
+  content: none !important;
+  display: none !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+@media (max-width: 768px) {
+  .hero-sobre {
+    height: 35vh;
+    margin-top: 60px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0 6% 20px 6%;
+  }
+
+  .hero-sobre::before {
+    opacity: 0.65;
+    background-position: center center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem!important;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0 0 10px 0;
+    padding: 0;
+    max-width: 90%;
+    word-break: break-word;
+    position: relative;
+    top: -90px; /* move o texto ligeiramente para cima */
+  }
+
+  #corpo-sobre {
+    padding-top: 10px !important;
+    padding-bottom: 50px !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6;
+    padding-left: 6%;
+    padding-right: 6%;
+    text-align: justify;
+  }
+
+  #corpo-sobre p {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+  }
+
+  #corpo-sobre h2, #corpo-sobre h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  #corpo-sobre strong {
+    background: linear-gradient(180deg, transparent 65%, rgba(229, 82, 77, 0.25) 0);
+  }
+
+  #corpo-sobre p {
+    margin-bottom: 18px;
+  }
+
+  #corpo-sobre p:last-of-type {
+    margin-bottom: 50px;
+  }
+}
+
+/* Alinhar o risco vermelho à esquerda dentro das hiperligações dos artigos */
+.artigo-link h2,
+.artigo-conteudo h2 {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.artigo-link h2::after,
+.artigo-conteudo h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 2px;
+  background: #a30000;
+  border-radius: 2px;
+}
+
+/* ===== BOTÃO DE DOWNLOAD DISCRETO (25% menor) ===== */
+.download-pdf {
+  display: inline-block;
+  color: #a30000;
+  border: 1px solid #a30000;
+  border-radius: 4px;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-size: 0.68rem;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.download-pdf:hover {
+  background: #a30000;
+  color: #fff;
+}
+
+/* Reduz margem inferior do título do artigo */
+.artigo-titulo {
+  margin-bottom: 6px;
+}
