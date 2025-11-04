@@ -252,14 +252,23 @@ header.visible { opacity: 1; }
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .hero-bg {
-    background-size: cover !important;
-    background-position: center center !important;
-    height: 100vh !important;
-    background-attachment: scroll !important;
+@media (max-width: 900px) {
+  article,
+  #artigo,
+  #artigo p,
+  #artigo li {
+    font-size: 90% !important;
+    line-height: 1.4 !important;
+    text-align: justify !important;
+  }
+
+  #artigo h1,
+  #artigo h2,
+  #artigo h3 {
+    font-size: 110% !important;
   }
 }
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -1188,8 +1197,8 @@ p, li { font-size: 26px; line-height: 1.6; }
    BLOG
 =========================== */
 #blog {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
   text-align: center;
   padding: 60px 20px;
   width: 100%;
@@ -1200,13 +1209,13 @@ p, li { font-size: 26px; line-height: 1.6; }
 #blog h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #000;
+  color: #fff;
 }
 
 #blog h3 {
   font-weight: 400;
   margin-bottom: 40px;
-  color: #000;
+  color: #fff;
 }
 
 .artigo-card {
@@ -1214,100 +1223,25 @@ p, li { font-size: 26px; line-height: 1.6; }
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
-  background: #fff;
-  color: #000;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
   text-decoration: none;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
-}
-
-.artigo-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  transition: background 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .artigo-card:hover {
   transform: scale(1.02);
-}
-
-.artigo-card:hover::before {
-  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255,255,255,0.3);
 }
 
 .artigo-conteudo {
   position: relative;
   z-index: 2;
   padding: 60px 30px;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-}
-
-/* ===========================
-   BLOG
-=========================== */
-#blog {
-  background: #fff;
-  color: #000;
-  text-align: center;
-  padding: 60px 20px;
-  width: 100%;
-  max-width: none;
-  box-sizing: border-box;
-}
-
-#blog h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #000;
-}
-
-#blog h3 {
-  font-weight: 400;
-  margin-bottom: 40px;
-  color: #000;
-}
-
-.artigo-card {
-  display: block;
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.artigo-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  transition: background 0.3s ease;
-}
-
-.artigo-card:hover {
-  transform: scale(1.02);
-}
-
-.artigo-card:hover::before {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.artigo-conteudo {
-  position: relative;
-  z-index: 2;
-  padding: 60px 30px;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 #blog .artigo-card .artigo-conteudo h3 {
@@ -1318,4 +1252,107 @@ p, li { font-size: 26px; line-height: 1.6; }
 
 #blog .artigo-card .artigo-conteudo p {
   font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+}
+
+# ===========================
+# BOTÃO DE DOWNLOAD (ESTILO VERMELHO COM CONTORNO)
+# ===========================
+.download-pdf {
+  display: inline-block;
+  background: transparent;
+  color: #ff3b30;
+  font-weight: 600;
+  padding: 12px 26px;
+  border: 2px solid #ff3b30;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.download-pdf:hover {
+  background: #ff3b30;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* ===========================
+   SECÇÃO DE COMENTÁRIOS
+=========================== */
+#comentarios {
+  background-color: #013440; /* azul petróleo */
+  text-align: center;
+  color: #fff;
+  padding: 80px 0;
+  width: 100%;
+}
+
+#comentarios h2 {
+  color: #fff;
+}
+
+#comentarios p,
+#comentarios label {
+  color: #e0e0e0;
+}
+
+#comentarios form {
+  display: inline-block;
+  text-align: left;
+  max-width: 700px;
+  width: 90%;
+}
+
+#comentarios input,
+#comentarios textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+#comentarios button.btn-enviar {
+  background: transparent;
+  border: 2px solid #ff3b30;
+  color: #ff3b30;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#comentarios button.btn-enviar:hover {
+  background: #ff3b30;
+  color: #fff;
+}
+/* ===========================
+   RESPONSIVO - ARTIGO (MOBILE)
+=========================== */
+@media (max-width: 900px) {
+  article,
+  #artigo,
+  #artigo p,
+  #artigo li {
+    font-size: 90% !important;
+    line-height: 1.4 !important;
+    text-align: justify !important;
+  }
+
+  #artigo h1,
+  #artigo h2,
+  #artigo h3 {
+    font-size: 110% !important;
+  }
+
+  /* Texto centrado na secção Blog no mobile */
+  #blog,
+  #blog p,
+  #blog h2,
+  #blog h3 {
+    text-align: center !important;
+  }
 }

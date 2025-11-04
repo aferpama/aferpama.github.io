@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <link rel="stylesheet" href="style_sobre.css">
+    <link rel="stylesheet" href="style_blog.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AFERPAMA — Construção e Engenharia</title>
@@ -331,6 +331,10 @@
       .hero-content {
         padding: 60px 20px;
       }
+
+      .hero-sobre {
+        padding: 80px 20px 60px 20px !important;
+      }
     }
 
     /* ===== AJUSTE TEXTO MOBILE ===== */
@@ -371,6 +375,34 @@
 
     header {
       z-index: 9000 !important;
+    }
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 30px 15px 0 15px !important;
+        margin-bottom: 0 !important;
+      }
+
+      .artigos {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+
+      .hero-sobre h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .hero-sobre h2 {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+        margin-top: 0 !important;
+      }
+
+      h1, h2 {
+        overflow: visible !important;
+        white-space: normal !important;
+      }
     }
   </style>
 

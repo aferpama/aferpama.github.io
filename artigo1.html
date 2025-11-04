@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <link rel="stylesheet" href="style_sobre.css">
+    <link rel="stylesheet" href="style_artigo.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AFERPAMA — Construção e Engenharia</title>
@@ -31,7 +31,6 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="style.css" />
 
   <!-- Dados estruturados JSON-LD -->
   <script type="application/ld+json">
@@ -83,16 +82,6 @@
   <main id="artigo">
     <div class="artigo-wrapper">
       <section class="artigo-conteudo">
-<div class="modo-toggle-container">
-  <div class="modo-toggle-icons">
-    ☀️
-    <label class="modo-switch">
-      <input type="checkbox" id="modoToggle">
-      <span class="slider"></span>
-    </label>
-    🌙
-  </div>
-</div>
   <p><strong>A Falsa Economia do Moderno</strong><br><em>7 minutos de leitura</em></p>
   <p class="download-inline">
     <a href="assets/artigos/artigo_1_falsa_economia_do_moderno.pdf"
@@ -147,7 +136,8 @@
   <!-- ===== SECÇÃO DE COMENTÁRIOS ===== -->
   <section id="comentarios">
     <h2>Deixe o seu comentário</h2>
-    <p class="comentarios-intro">Queremos ouvi-lo! Diga-nos se concorda com o artigo, o que mudaria e que temáticas gostaria de ver abordadas.</p>
+    <p class="comentarios-intro">Queremos ouvi-lo!</p>
+    <p class="comentarios-intro">Diga-nos se concorda com o artigo, o que mudaria e que temáticas gostaria de ver abordadas.</p>
     <form action="https://formsubmit.co/1b4ff5f1c16c993af26bf441ae66d100" method="POST" class="comentarios-form">
       <input type="hidden" name="_subject" value="Novo comentário no artigo A Falsa Economia do Moderno">
       <input type="hidden" name="_captcha" value="false">
@@ -225,254 +215,4 @@
 </body>
 </html>
 
-<style>
-/* ===== SECÇÃO DE COMENTÁRIOS ===== */
-#comentarios {
-  background: #1f2a32;
-  color: #fff;
-  padding: 80px 20px;
-}
 
-#comentarios h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
-
-.comentarios-intro {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-.comentarios-form {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.comentarios-form label {
-  font-weight: 600;
-}
-
-.comentarios-form input,
-.comentarios-form textarea {
-  background: #222;
-  color: #fff;
-  border: 1px solid #444;
-  border-radius: 4px;
-  padding: 12px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-.comentarios-form input:focus,
-.comentarios-form textarea:focus {
-  outline: none;
-  border-color: #a30000;
-}
-
-.btn-enviar {
-  background: #a30000;
-  color: #fff;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-enviar:hover {
-  background: #cc0000;
-}
-
-/* ===== EFEITO DE BLUR AO ABRIR MENU ===== */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 8;
-}
-
-.menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Bloqueia scroll do body quando o menu está aberto */
-.no-scroll {
-  overflow: hidden;
-}
-
-/* ===== TOGGLE ESTILO APPLE ===== */
-.modo-toggle-container {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.modo-toggle-icons {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.3rem;
-  user-select: none;
-  opacity: 0.5; /* torna os ícones parcialmente transparentes */
-  transition: opacity 0.3s ease;
-}
-
-.modo-toggle-icons:hover {
-  opacity: 1; /* aumenta a visibilidade ao passar o rato */
-}
-
-.modo-switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 32px;
-}
-
-.modo-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #a0a5aa;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-.modo-switch input:checked + .slider {
-  background-color: #a30000;
-}
-
-.modo-switch input:checked + .slider::before {
-  transform: translateX(28px);
-}
-
-/* ===== MODOS DE COR DO ARTIGO ===== */
-#artigo.dark-mode {
-  background: #000;
-  color: #fff;
-}
-
-#artigo.light-mode {
-  background: #fff;
-  color: #111;
-}
-
-#artigo.light-mode .artigo-conteudo h2,
-#artigo.light-mode .artigo-conteudo h3,
-#artigo.light-mode .artigo-conteudo p,
-#artigo.light-mode .artigo-conteudo strong,
-#artigo.light-mode .artigo-conteudo em,
-#artigo.light-mode .artigo-conteudo blockquote {
-  color: #111;
-}
-
-#artigo.dark-mode .artigo-conteudo h2,
-#artigo.dark-mode .artigo-conteudo h3,
-#artigo.dark-mode .artigo-conteudo p,
-#artigo.dark-mode .artigo-conteudo strong,
-#artigo.dark-mode .artigo-conteudo em,
-#artigo.dark-mode .artigo-conteudo blockquote {
-  color: #fff;
-}
-/* ===== CITAÇÃO FINAL DO ARTIGO ===== */
-.citacao-final {
-  margin-top: 150px;
-  margin-bottom: 80px;
-  font-size: 1.7em;
-  text-align: left;
-  line-height: 1.5;
-}
-/* ===== POSIÇÃO FIXA DO TOGGLE NO DESKTOP ===== */
-@media (min-width: 769px) {
-  .modo-toggle-container {
-    position: fixed;
-    top: 85px; /* ligeiramente abaixo do cabeçalho */
-    right: 67px; /* desloca mais para a esquerda */
-    z-index: 999;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-  }
-
-  .modo-toggle-container:hover {
-    opacity: 1;
-  }
-}
-/* ===== JUSTIFICAÇÃO DO TEXTO DO ARTIGO ===== */
-.artigo-conteudo p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-@media (max-width: 768px) {
-  .modo-toggle-container {
-    position: fixed;
-    top: 60px; /* mais próximo do cabeçalho */
-    right: 20px;
-    z-index: 999;
-    transform: scale(0.5); /* reduz para 50% */
-    opacity: 0.5; /* mantém o mesmo estilo suave */
-    transition: opacity 0.3s ease;
-  }
-
-  .modo-toggle-container:hover {
-    opacity: 1;
-  }
-}
-</style>
-
-<script>
-  const artigo = document.getElementById("artigo");
-  const modoToggle = document.getElementById("modoToggle");
-
-  // Define modo claro como padrão
-  artigo.classList.add("light-mode");
-  modoToggle.checked = false;
-
-  modoToggle.addEventListener("change", () => {
-    const isDark = modoToggle.checked;
-    if (isDark) {
-      artigo.classList.add("dark-mode");
-      artigo.classList.remove("light-mode");
-    } else {
-      artigo.classList.add("light-mode");
-      artigo.classList.remove("dark-mode");
-    }
-  });
-</script>
