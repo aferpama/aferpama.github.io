@@ -125,17 +125,26 @@
   <section id="servicos">
     <h2>Serviços</h2>
     <div class="servicos-grid">
-      <a href="construimos.html" class="servico-card" style="--bg-image: url('assets/construimos.webp')">
+      <a class="servico-card" data-servico="construimos" style="--bg-image: url('assets/construimos.webp')">
         <h3>Construímos</h3>
       </a>
-      <a href="reabilitamos.html" class="servico-card" style="--bg-image: url('assets/reabilitamos.webp')">
+      <a class="servico-card" data-servico="reabilitamos" style="--bg-image: url('assets/reabilitamos.webp')">
         <h3>Reabilitamos</h3>
       </a>
-      <a href="consultoria.html" class="servico-card" style="--bg-image: url('assets/guiamos.webp')">
+      <a class="servico-card" data-servico="guiamos" style="--bg-image: url('assets/guiamos.webp')">
         <h3>Guiamos o Seu Projeto</h3>
       </a>
     </div>
   </section>
+
+  <!-- Modal Serviços -->
+  <div id="servicoModal" class="modal-servico">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
   
   <!-- ===== PORTEFÓLIO ===== -->
   <section id="portfolio">
@@ -227,14 +236,57 @@
   </footer>
 
   <style>
+    .modal-servico {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 3000;
+      padding: 20px;
+    }
+    .modal-servico.show {
+      display: flex;
+    }
+    .modal-content {
+      background: #111;
+      color: #fff;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      position: relative;
+    }
+    .modal-content h2 {
+      margin-bottom: 15px;
+    }
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+    }
+    .close-modal:hover {
+      color: #ff4c4c;
+    }
     /* === SOBRE: layout e visibilidade === */
     #sobre {
       background: #000;
       color: #fff;
       text-align: center;
-      padding: 120px 0;
+      padding: 40px 0 60px 0;
       position: relative;
       z-index: 2;
+    }
+
+    @media (max-width: 900px) {
+      #sobre {
+        padding: 20px 10px 40px 10px !important;
+      }
     }
 
     .sobre-container {
@@ -251,7 +303,17 @@
 
     @media (max-width: 900px) {
       #sobre {
-        padding: 80px 20px;
+        padding: 40px 20px 60px 20px; /* reduz espaço superior no mobile */
+      }
+      #sobre .sobre-container {
+        margin-top: 0;
+      }
+      #sobre h2 {
+        margin-bottom: 10px;
+      }
+      #sobre p {
+        margin-top: 8px;
+        margin-bottom: 8px;
       }
     }
     /* === SERVIÇOS - cartões interativos === */
@@ -350,11 +412,15 @@
       }
 
       .hero {
-        min-height: 90vh;
+        min-height: 90dvh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+      }
+
+      footer.visible {
+        position: static;
       }
     }
 
@@ -362,6 +428,32 @@
   </style>
 
   <!-- ===== SCRIPTS ===== -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("servicoModal");
+    const title = document.getElementById("modal-title");
+    const text = document.getElementById("modal-text");
+    const closeBtn = document.querySelector(".close-modal");
+
+    const textos = {
+      construimos: "A AFERPAMA executa obras de raiz, com foco em qualidade, rigor técnico e durabilidade. Desde as fundações até aos acabamentos, garantimos uma construção sólida e eficiente.",
+      reabilitamos: "Reabilitamos edifícios e infraestruturas preservando o caráter original, mas introduzindo conforto e tecnologia atuais. Cada detalhe é tratado com precisão e respeito pela história da obra.",
+      guiamos: "Prestamos consultoria e acompanhamento técnico em todas as fases de obra — planeamento, execução e auditoria — assegurando a conformidade e o controlo de qualidade."
+    };
+
+    document.querySelectorAll(".servico-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const servico = card.getAttribute("data-servico");
+        title.textContent = card.textContent.trim();
+        text.textContent = textos[servico] || "";
+        modal.classList.add("show");
+      });
+    });
+
+    closeBtn.addEventListener("click", () => modal.classList.remove("show"));
+    modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.remove("show"); });
+  });
+  </script>
   <script>
     // Força sempre o topo no refresh / navegação
     window.history.scrollRestoration = "manual";
@@ -494,9 +586,33 @@
   <button class="lb-prev" aria-label="Anterior">&#10094;</button>
   <img class="lb-img" src="" alt="Imagem do portefólio">
   <button class="lb-next" aria-label="Seguinte">&#10095;</button>
+  <h3 class="lb-title"></h3>
   <div class="lb-counter"></div>
 </div>
 <style>
+  .lightbox .lb-title {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 16px;
+    border-radius: 6px;
+    z-index: 10002;
+  }
+  @media (max-width: 900px) {
+    .lightbox .lb-title {
+      top: 16px;
+      font-size: 16px;
+      padding: 4px 12px;
+    }
+  }
 .lightbox {
   position: fixed;
   inset: 0;
@@ -597,6 +713,7 @@
     current = startIndex;
     preloadImages(gallery); // 👈 pré-carrega todas as imagens
     updateImage();
+    updateTitle();
     lightbox.classList.add('open');
     lightbox.style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -616,6 +733,24 @@
     setTimeout(()=>{ lightbox.style.display = 'none'; }, 250);
     lbImg.src = '';
     document.body.style.overflow = '';
+  }
+
+  function updateTitle(){
+    // Título fixo baseado no álbum atual, não muda por foto
+    const lbTitle = document.querySelector('.lb-title');
+    if (lbTitle && gallery.length) {
+      // Tenta identificar o álbum atual pelo conteúdo da galeria
+      const allItems = document.querySelectorAll('.portfolio-item');
+      let matchedItem = null;
+      allItems.forEach(item => {
+        const data = item.getAttribute('data-gallery');
+        if (data && data.includes(gallery[0])) {
+          matchedItem = item;
+        }
+      });
+      const albumTitle = matchedItem ? matchedItem.querySelector('h3')?.textContent.trim() : '';
+      lbTitle.textContent = albumTitle;
+    }
   }
 
   function updateImage(){
